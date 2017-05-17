@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+
+/*     "use strict";
+
+    console.log("HI");
+    var bar = null;
+    console.log(typeof bar === "object");  // logs true!
+
+
+    (function(){
+      var b;
+      var a = b = 3;
+    })();
+
+    console.log("a defined? " + (typeof a !== 'undefined'));
+    console.log("b defined? " + (typeof b !== 'undefined'));
+
+    var myObject = {
+        foo: "bar",
+        func: function() {
+            var self = this;
+            console.log("outer func:  this.foo = " + this.foo);
+            console.log("outer func:  self.foo = " + self.foo);
+            (function() {
+                //console.log("inner func:  this.foo = " + this.foo);
+                console.log("inner func:  self.foo = " + self.foo);
+            }());
+        }
+    };
+    myObject.func();
+
+    var object = {foo: "bar", foo: "baz"};
+
+    console.log(object);
+
+
+    var Employee = {
+      age: 28,
+      name: 'abc',
+      designation: 'developer'
+    }
+
+    console.log(delete Employee.name);   // returns true
+    console.log(Employee.age);    // returns true
+    console.log(delete Employee.age);    // returns true
+    console.log(Employee.age);    // returns true
+
+
+    function foo1()
+    {
+      return {
+          bar: "hello"
+      };
+    }
+
+    function foo2()
+    {
+      return
+      {
+          bar: "hello"
+      };
+    }
+
+    console.log("foo1 returns:");
+    console.log(foo1());
+    console.log("foo2 returns:");
+    console.log(foo2());
+
+    console.log(0.1 + 0.2);
+    console.log(0.1 + 0.2 == 0.3);
+
+    var youHit = Math.floor(Math.random()*2);
+    console.log(youHit);
+
+    console.log("0 || 1 = "+(0 || 1));
+    console.log("1 || 2 = "+(3 || 2));
+    console.log("0 && 1 = "+(0 && 1));
+    console.log("1 && 2 = "+(3 && 20)); */
+
+/*     for (var i = 0; i < 5; i++) {
+      (function(x) {
+          setTimeout(function() { console.log(x); }, x * 1000 );
+        })(i);
+    } */
+
+/*     function getVal(){
+      return 34;
+    }
+
+    function ok(obj){
+      console.log(obj());
+    }
+
+    ok(getVal); */
+
+
+/*     this.x = 9;    // this refers to global "window" object here in the browser
+    var module = {
+      x: 81,
+      getX: function() { return this.x; }
+    };
+
+    module.getX(); // 81
+
+    var retrieveX = module.getX;
+    retrieveX();
+    // returns 9 - The function gets invoked at the global scope
+
+    // Create a new function with 'this' bound to module
+    // New programmers might confuse the
+    // global var x with module's property x
+    var boundGetX = retrieveX.bind(module);
+    boundGetX(); // 81 */
+
+
+
+    // four variables are created and assigned in a single go,
+    // separated by commas
+/*     var myObj = new Object(),
+        str = 'myString',
+        rand = Math.random(),
+        obj = new Object();
+
+    myObj.type              = 'Dot syntax';
+    myObj['date created']   = 'String with space';
+    myObj[str]              = 'String value';
+    myObj[rand]             = 'Random Number';
+    myObj[obj]              = 'Object';
+    myObj['']               = 'Even an empty string';
+
+    Object.prototype.toString = function myObjToString() {
+      var ret = 'This is new Object()';
+      return ret;
+    }
+
+    console.log(myObj.toString());
+
+    var obj = {
+      name: 'myObj'
+    };
+
+    console.log(JSON.stringify(obj));
+
+
+    var map = Object.create(null);
+    map["pizza"] = 0.069;
+    console.log("toString" in map);
+    // → false
+    console.log("pizza" in map);
+    // → true
+
+
+    function repeat(string, times) {
+      var result = "";
+      for (var i = 0; i < times; i++)
+        result += string;
+      return result;
+    }
+
+    function TextCell(text) {
+      this.text = text.split("\n");
+    }
+    TextCell.prototype.minWidth = function() {
+      return this.text.reduce(function(width, line) {
+        return Math.max(width, line.length);
+      }, 0);
+    };
+    TextCell.prototype.minHeight = function() {
+      return this.text.length;
+    };
+    TextCell.prototype.draw = function(width, height) {
+      var result = [];
+      for (var i = 0; i < height; i++) {
+        var line = this.text[i] || "";
+        result.push(line + repeat(" ", width - line.length));
+      }
+      return result;
+    };
+
+
+    var pile = {
+      elements: ["eggshell", "orange peel", "worm", "abc doc"],
+      get height() {return this.elements.length;},
+      set height(value) {console.log("Ignoring attempt to set height to", value);},
+    };
+
+    console.log(pile.height);
+    // → 3
+    pile.height = 100;
+    // → Ignoring attempt to set height to 100
+
+
+    var obj = {};
+    Object.defineProperties(obj, {
+      'property1': {
+        value: true,
+        writable: true
+      },
+      'property2': {
+        value: 'Hello',
+        writable: false
+      }
+      // etc. etc.
+    });
+
+    obj.property1 = "OKOKOK";
+    console.log(obj);
+
+    function makeUser() {
+      var name = prompt("Name?");
+      var age = prompt("Age?");
+      return {
+        name: name,
+        age: age
+      };
+    } */
+
+    //var user = makeUser("John", 30);
+    //alert(user.name); // John
+
+    //var user2 = makeUser();
+    //alert(user2.name); // John
+
+/*     function getMonthName(mo) {
+      mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
+      var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
+                    'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      if (months[mo]) {
+        return months[mo];
+      } else {
+        throw 'InvalidMonthNo'; //throw keyword is used here
+      }
+    }
+
+    try { // statements to try
+      var monthName = getMonthName(-8); // function could throw exception
+    }
+    catch (e) {
+      monthName = 'unknown';
+      console.log(e); // pass exception object to error handler -> your own function
+    }
+
+    function f() {
+      try {
+        console.log(0);
+        throw 'bogus';
+      } catch(e) {
+        console.log(1);
+        return true;
+      } finally {
+        console.log(2);
+        return false;
+      }
+      // "return false" is executed now
+      console.log(5); // not reachable
+    }
+    console.log(f()); // console 0, 1, 3; returns false */
+
+
+    //#### CALL APPLY and BIND ############################################################
+    var objVal = {
+      num:5,
+      label:"John"
+    };
+
+
+    var funcDef = function showMsg(arg1, arg2){
+      return this.num + " of " + arg1 + "/" + arg2 +" for " + this.label;
+    };
+
+    console.log(funcDef.call(objVal, 23, 12));
+    console.log(funcDef.apply(objVal,[23,8]));
+
+    var bindObj = funcDef.bind(objVal);
+    console.log(bindObj(23,9));
+    //#####################################################################################
+
+
+    //#### PUBLIC AND PRIVATE OBJECT ######################################################
+    var Pizza = {
+      crust:"thin",
+      toppings:3,
+      hasBacon:true,
+      howManyToppings:function(){
+        return this.toppings;
+      }
+    };
+
+    var PizzaClass = function(){
+      this.crust = "thin";
+      this.toppings = 3;
+      this.hasBacon = true;
+
+    };
+
+    Pizza.price = "Rs 280";
+    console.log(Pizza.howManyToppings());
+
+    var obj = new PizzaClass();
+    var ok = 45;
+
+    console.dir(PizzaClass);
+
+    //#####################################################################################
+
+  </script>
+
+</head>
+
+<body>
+  <h1>JavaScript test engine</h1>
+</body>
+</html>
